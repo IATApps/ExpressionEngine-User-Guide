@@ -60,13 +60,15 @@ For ExpressionEngine installations that power multiple domains or subdomains, yo
 
 ## CAPTCHA Words
 
-The CAPTCHA system uses a default dictionary. You can override these by adding a special user config file and returning an array of words you want to use instead. Create a PHP file at `system/user/config/captcha.php` with the format:
+The CAPTCHA system uses a default dictionary stored at `system/ee/EllisLab/ExpressionEngine/Config/captcha.php`. You can extend these by adding a special user config file, and returning an array of words you want to use instead. Create a PHP file at `system/user/config/captcha.php` with the format:
 
     <?php
 
-    return [
+    return array(
       'your',
       'words',
       'here',
       /* ... */
-    ];
+    );
+    
+To replace the default dictionary at , you will need to remove the file at `system/ee/EllisLab/ExpressionEngine/Config/captcha.php`.
